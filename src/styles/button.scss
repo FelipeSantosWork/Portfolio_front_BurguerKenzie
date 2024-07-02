@@ -1,0 +1,40 @@
+.btn {
+    background: var(--color-btnDisable);
+    border: 2px solid #27AE60;
+
+    color: var(--color-gray0);
+
+    width: 106px;
+    height: 40px;
+    top: 133px;
+    left: 20px;
+    padding: 0px, 20px, 0px, 20px;
+    border-radius: 8px;
+    border: 2px;
+    gap: 10px;
+
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+
+    text-align: center;
+
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        background: var(--color-primary);
+
+    }
+    &:active{
+        background-color: #85deaa;        
+    }
+
+    &:disabled {
+        background-color: var(--color-btnDisable);
+    }
+
+}
