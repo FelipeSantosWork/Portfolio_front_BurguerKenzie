@@ -1,6 +1,6 @@
 import { ProductCard } from "./ProductCard";
 export const ProductList = ({ productList, addToCart }) => {
-   
+
    return (
       <ul className="ulProductList">
          {productList.map((product) => (

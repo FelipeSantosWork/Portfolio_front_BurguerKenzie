@@ -42,28 +42,29 @@ export const HomePage = () => {
       }
       getProductList();
    });
-   useEffect(()=>{
+   useEffect(() => {
       localStorage.setItem("cartList", JSON.stringify(cartList));
 
-   },[cartList]);
-   useEffect(()=>{
+   }, [cartList]);
+   useEffect(() => {
       localStorage.setItem("cartItens", JSON.stringify(cartItens));
 
-   },[cartItens]);
+   }, [cartItens]);
 
    const addToCart = (product) => {
       const productInCart = cartList.find(item => product.id === item.id)
       if (productInCart) {
       }
+
       else {
          setCartList((prevValue) => {
             setCartItens(cartItens + 1);
-            console.log(cartItens);
             return [...prevValue, product];
 
          });
       }
    };
+
 
    const removeCartItem = (id) => {
       const filteredCartItens = cartList.filter((product) => product.id !== id);

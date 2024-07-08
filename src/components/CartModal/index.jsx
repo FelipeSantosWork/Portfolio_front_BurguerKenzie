@@ -10,9 +10,9 @@ export const CartModal = ({ cartList, removeCartItem, removeAllCartItem }) => {
       const button = document.querySelector(".closeModal");
       const modalContainer = document.querySelector(".modalContainer");
 
-      button.addEventListener("click", ()=>{
+      button.addEventListener("click", () => {
          modalContainer.close();
-      })      
+      })
    }
 
    return (
@@ -26,14 +26,14 @@ export const CartModal = ({ cartList, removeCartItem, removeAllCartItem }) => {
          <div>
             <ul className="ulCartItens">
                {cartList.map((product) => (
-                  <CartItemCard removeCartItem ={removeCartItem} key={product.id} product={product} />
+                  <CartItemCard removeCartItem={removeCartItem} key={product.id} product={product} />
                ))}
             </ul>
          </div>
          <div>
             <div className="cartItensTotalAmount">
                <span className="body semibold"> Total</span>
-               <span className="body">{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL"})}</span>
+               <span className="body">{total.toLocaleString('pt-BR', { style: "currency", currency: "BRL" })}</span>
             </div>
             <button className="removeAllBtn" onClick={removeAllCartItem}>Remover todos</button>
          </div>
